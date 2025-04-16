@@ -1,4 +1,4 @@
-const API_URL = "https://yardstickai-assignment.onrender.com"
+const API_URL = "https://yardstickai-assignment.onrender.com/api"
 
 export async function fetchTransactions() {
   try {

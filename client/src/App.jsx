@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import TransactionForm from "./components/TransactionForm"
 import TransactionList from "./components/TransactionList"
@@ -7,6 +5,7 @@ import MonthlyChart from "./components/MonthlyChart"
 import Dashboard from "./components/Dashboard"
 import BudgetForm from "./components/BudgetForm"
 import BudgetComparisonChart from "./components/BudgetComparisonChart"
+import ClipLoader from "react-spinners/ClipLoader";
 import { fetchTransactions, fetchCategories, fetchBudgets } from "./lib/api"
 import "./styles/App.css"
 
@@ -73,7 +72,7 @@ function App() {
     }
   }
 
-  if (loading) return <div className="loading">Loading...</div>
+  if (loading) return <div className="loading"><ClipLoader /></div>
   if (error) return <div className="error">{error}</div>
 
   return (
