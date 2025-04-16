@@ -1,0 +1,121 @@
+.transaction-list-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .transaction-list-wrapper {
+    overflow-x: auto;
+  }
+  
+  .transaction-list {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  .transaction-list th,
+  .transaction-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .transaction-list th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+  }
+  
+  .transaction-list th.sortable {
+    cursor: pointer;
+  }
+  
+  .transaction-list th.sortable:hover {
+    background-color: #e9ecef;
+  }
+  
+  .transaction-list tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .transaction-list td.amount {
+    text-align: right;
+    font-weight: 500;
+  }
+  
+  .transaction-list td.actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-edit {
+    background-color: var(--info-color);
+    color: white;
+  }
+  
+  .btn-edit:hover {
+    background-color: #138496;
+  }
+  
+  .btn-delete {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  .btn-delete.confirm {
+    background-color: #dc3545;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .btn-edit:disabled,
+  .btn-delete:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .no-transactions {
+    padding: 20px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .transaction-list-container {
+      padding: 15px;
+    }
+  
+    .transaction-list th,
+    .transaction-list td {
+      padding: 8px;
+    }
+  }
+  

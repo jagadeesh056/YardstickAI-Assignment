@@ -1,0 +1,109 @@
+.budget-form-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .budget-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.2);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .btn-submit {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-submit:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .btn-submit:disabled {
+    background-color: var(--secondary-color);
+    cursor: not-allowed;
+  }
+  
+  .existing-budgets {
+    margin-top: 20px;
+  }
+  
+  .budgets-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  .budgets-table th,
+  .budgets-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .budgets-table th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+  }
+  
+  .budgets-table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .budgets-table td.amount {
+    text-align: right;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .budget-form-container {
+      padding: 15px;
+    }
+  
+    .budgets-table th,
+    .budgets-table td {
+      padding: 8px;
+    }
+  }
+  
